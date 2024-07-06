@@ -1,0 +1,260 @@
+.header {
+   height: 120px;
+   width: 100%;
+   background: #9ADC30;
+   top: 0;
+   left: 0;
+   position: absolute;
+} 
+.header .heading {
+   color: white;
+   text-align: center;
+}
+body {
+   font-family: Arial, sans-serif;
+   background: #414141;
+   margin: 0;
+   padding: 0;
+}
+.navbar-button-in {
+   height: 30px;
+   width: 30px;
+   position: absolute;
+   right: 10px;
+   top: 5px;
+   background: url(menu.png);
+   background-size: cover;
+}
+.navbar-button-out {
+   height: 40px;
+   width: 100%;
+   background: #575757;
+   position: absolute;
+   left: 0;
+   top: 120px;
+   justify-content: center;
+}
+  main {
+    padding: 20px;
+  }
+  
+  article {
+    margin-top: 190px;
+    border: 2px solid #2B2B2B;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 300px;
+    position: absolute;
+  }
+  .navbar {
+   height: 100%;
+   width: 100%;
+   background: #353535;
+   position: absolute;
+   left: 0;
+   display: none;
+   top: 0;
+}
+.navbar a {
+   height: 45px;
+   width: 100%;
+   position: absolute;
+   background: #4F4F4F;
+   color: #fff;
+   text-decoration: none;
+   cursor: default;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+a:nth-child(1) {
+   top: 50px;
+}
+a:nth-child(2) {
+   top: 100px;
+}
+a:nth-child(3) {
+   top: 150px;
+}
+a:nth-child(4) {
+   top: 200px;
+}
+a:nth-child(5) {
+   top: 250px;
+}
+a:nth-child(6) {
+   top: 300px;
+}
+a:nth-child(7) {
+   top: 350px;
+}
+a:nth-child(8) {
+   top: 400px;
+}
+a:nth-child(9) {
+   top: 450px;
+}
+.navbar h1 {
+   text-align: center;
+   color: white;
+}
+.navbar h2 {
+   color: white;
+   position: absolute;
+   right: 20px;
+   top: 10px;
+   font-size: 35px;
+}
+.login {
+   height: 30px;
+   width: 30px;
+   background: url(login-icon.png);
+   background-size: cover;
+   position: absolute;
+   right: 0px;
+}
+.login-button {
+   height: 35px;
+   width: 110px;
+   border: 2px solid white;
+   border-radius: 50px;
+   position: absolute;
+   right: 5px;
+   bottom: 5px;
+   color: white;
+   display: flex;
+   align-items: center;
+}
+.login-button p {
+   position: absolute;
+   left: 3px;
+}
+.login-page {
+   height: 200px;
+   width: 300px;
+   background: #FFFFFF;
+   position: absolute;
+   left: 50px;
+   top: 150px;
+   border-radius: 10px;
+   display: none;
+}
+.login-page #email, #password {
+   position: absolute;
+   height: 20px;
+   width: 240px;
+   left: 10px;
+   top: 40px;
+   border: none;
+   border-bottom: 2px solid #878787;
+}
+.login-page #password {
+   top: 95px;
+}
+.login-page #email:focus, #password:focus {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page input {
+   padding: 8px 10px;
+   font-size: 18px;
+   border: #acacac solid 2px;
+   background-color: transparent;
+   color: #444;
+   transition: 0.15s all ease;
+}
+
+.login-page input:focus {
+   border-color: #eee;
+   outline: none;
+}
+
+.login-page input::placeholder {
+   color: transparent;
+}
+
+.login-page .form-label {
+   position: absolute;
+   top: 35px;
+   left: 0;
+   font-size: 18px;
+   padding: 0 10px;
+   color: #acacac;
+   pointer-events: none;
+   transition: 0.15s all ease;
+}
+.login-page .passo-label {
+   position: absolute;
+   top: 90px;
+   left: 0;
+   font-size: 18px;
+   padding: 0 10px;
+   color: #ACACAC;
+   pointer-events: none;
+   transition: 0.15s all ease;
+}
+.login-page input:focus+.passo-label,
+.login-page input:not(:placeholder-shown)+.passo-label {
+   transform: translate(5px, -22px);
+   background-color: #fff;
+   font-size: 14px;
+   color: #3186FF;
+}
+.login-page #password:not(:placeholder-shown) {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page #email:not(:placeholder-shown) {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page input:focus+.form-label,
+.login-page input:not(:placeholder-shown)+.form-label {
+   transform: translate(5px, -22px);
+   background-color: #fff;
+   font-size: 14px;
+   color: #3186FF;
+}
+.login-page #submit {
+   height: 40px;
+   width: 270px;
+   background: #000;
+   border-radius: 50px;
+   position: absolute;
+   bottom: 10px;
+   left: 13px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   user-select: none;
+}
+.login-page #submit p {
+   position: absolute;
+   left: 100px;
+   color: white;
+   top: -13px;
+   font-size: 20px;
+}
+.login-page #submit:active {
+   background: #454545;
+}
+#show-pass {
+   height: 30px;
+   width: 30px;
+   background: url(eyecon.png);
+   background-size: cover;
+   position: absolute;
+   top: 85px;
+   left: 220px;
+   filter: brightness(0);
+}
+.login-page p {
+   color: #636363;
+   position: absolute;
+   right: 15px;
+   top: -20px;
+   font-size: 30px;
+}
