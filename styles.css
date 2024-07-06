@@ -1,6 +1,8 @@
-body {
-
-   font-family: Arial, sans-serif;
+html {
+   height: 200%;
+   background: url(bg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
 }
 
 header {
@@ -20,6 +22,7 @@ main {
    border-radius: 5px;
    padding: 20px;
    margin-top: 140px;
+   background: none;
 }
 
 .step h2 {
@@ -37,9 +40,6 @@ main {
 .header .heading {
    color: white;
    text-align: center;
-}
-body {
-   background: #414141;
 }
 .login {
    height: 30px;

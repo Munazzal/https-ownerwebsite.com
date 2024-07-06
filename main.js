@@ -11,9 +11,9 @@ const navopen = document.getElementById('nav-button');
 let pass = false;
 show.addEventListener('click', () => {
    if (!pass) {
-     pass = true;
-     password.type = 'text';
-     show.style.filter = 'brightness(1)';
+      pass = true;
+      password.type = 'text';
+      show.style.filter = 'brightness(1)';
    }
    else {
       pass = false;
@@ -37,6 +37,7 @@ submit.addEventListener('click', function() {
       localStorage.setItem('email', email.value);
       localStorage.setItem('password', password.value);
       alert('Sign Up Successfully!')
+      page.style.display = 'none';
    }
    if (email.value === '') {
       alert('No email provided')

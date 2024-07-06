@@ -10,8 +10,9 @@
    color: white;
    text-align: center;
 }
-body {
-   background: url(bg1.jpg);
+html {
+   height: 100%;
+   background: url(bg.jpg);
    background-size: cover;
    background-repeat: no-repeat;
 }

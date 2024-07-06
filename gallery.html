@@ -1,0 +1,360 @@
+<html>
+    <head>
+         <style>
+         .header {
+   height: 120px;
+   width: 100%;
+   background: #9ADC30;
+   top: 0;
+   left: 0;
+   position: absolute;
+}
+.header, .heading {
+   color: white;
+   text-align: center;
+}
+html {
+   height: 200%;
+   background: url(bg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.login {
+   height: 30px;
+   width: 30px;
+   background: url(login-icon.png);
+   background-size: cover;
+   position: absolute;
+   right: 0px;
+}
+.login-button {
+   height: 35px;
+   width: 110px;
+   border: 2px solid white;
+   border-radius: 50px;
+   position: absolute;
+   right: 5px;
+   bottom: 5px;
+   color: white;
+   display: flex;
+   align-items: center;
+}
+.login-button p {
+   position: absolute;
+   left: 3px;
+}
+.login-page {
+   height: 200px;
+   width: 300px;
+   background: #FFFFFF;
+   position: fixed;
+   left: 50px;
+   top: 150px;
+   z-index: 400;
+   border-radius: 10px;
+   display: none;
+}
+.login-page #email, #password {
+   position: absolute;
+   height: 20px;
+   width: 240px;
+   left: 10px;
+   top: 40px;
+   border: none;
+   border-bottom: 2px solid #878787;
+}
+.login-page #password {
+   top: 98px;
+}
+.login-page #email:focus, #password:focus {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page input {
+   padding: 8px 10px;
+   font-size: 18px;
+   border: #acacac solid 2px;
+   background-color: transparent;
+   color: #444;
+   transition: 0.15s all ease;
+}
+
+.login-page input:focus {
+   border-color: #eee;
+   outline: none;
+}
+
+.login-page input::placeholder {
+   color: transparent;
+}
+
+.login-page .form-label {
+   position: absolute;
+   top: 35px;
+   left: 0;
+   font-size: 18px;
+   padding: 0 10px;
+   color: #acacac;
+   pointer-events: none;
+   transition: 0.15s all ease;
+}
+.login-page .passo-label {
+   position: absolute;
+   top: 90px;
+   left: 0;
+   font-size: 18px;
+   padding: 0 10px;
+   color: #ACACAC;
+   pointer-events: none;
+   transition: 0.15s all ease;
+}
+.login-page input:focus+.passo-label,
+.login-page input:not(:placeholder-shown)+.passo-label {
+   transform: translate(5px, -22px);
+   background-color: #fff;
+   font-size: 14px;
+   color: #3186FF;
+}
+.login-page #password:not(:placeholder-shown) {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page #email:not(:placeholder-shown) {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page input:focus+.form-label,
+.login-page input:not(:placeholder-shown)+.form-label {
+   transform: translate(5px, -22px);
+   background-color: #fff;
+   font-size: 14px;
+   color: #3186FF;
+}
+.login-page #submit {
+   height: 40px;
+   width: 270px;
+   background: #000;
+   border-radius: 50px;
+   position: absolute;
+   bottom: 10px;
+   left: 13px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   user-select: none;
+}
+.login-page #submit p {
+   position: absolute;
+   left: 100px;
+   color: white;
+   top: -13px;
+   font-size: 20px;
+}
+.login-page #submit:active {
+   background: #454545;
+}
+#show-pass {
+   height: 30px;
+   width: 30px;
+   background: url(eyecon.png);
+   background-size: cover;
+   position: absolute;
+   top: 85px;
+   left: 240px;
+   filter: brightness(0);
+}
+.login-page p {
+   color: #636363;
+   position: absolute;
+   right: 15px;
+   top: -20px;
+   font-size: 30px;
+}
+.navbar-button-in {
+   height: 30px;
+   width: 30px;
+   position: absolute;
+   right: 10px;
+   top: 5px;
+   background: url(menu.png);
+   background-size: cover;
+}
+.navbar-button-out {
+   height: 40px;
+   width: 100%;
+   background: #575757;
+   position: absolute;
+   left: 0;
+   top: 120px;
+   justify-content: center;
+}
+.navbar {
+   height: 200%;
+   width: 100%;
+   background: #353535;
+   position: absolute;
+   left: 0;
+   display: none;
+   z-index: 60000;
+   top: 0;
+}
+a {
+   height: 45px;
+   width: 100%;
+   position: absolute;
+   background: #4F4F4F;
+   color: #fff;
+   text-decoration: none;
+   cursor: default;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+a:nth-child(1) {
+   top: 50px;
+}
+a:nth-child(2) {
+   top: 100px;
+}
+a:nth-child(3) {
+   top: 150px;
+}
+a:nth-child(4) {
+   top: 200px;
+}
+a:nth-child(5) {
+   top: 250px;
+}
+a:nth-child(6) {
+   top: 300px;
+}
+a:nth-child(7) {
+   top: 350px;
+}
+a:nth-child(8) {
+   top: 400px;
+}
+a:nth-child(9) {
+   top: 450px;
+}
+.navbar h1 {
+   text-align: center;
+   color: white;
+}
+.navbar h2 {
+   color: white;
+   position: absolute;
+   right: 20px;
+   top: 10px;
+   font-size: 35px;
+}
+.gallery img {
+  width:195px;
+}
+.gallery {
+   position: absolute;
+   top: 160px;
+   left: 0;
+   overflow-y: scroll;
+}
+         </style>
+       </head>
+ <body>
+   <div class="header">
+      <h1 class="heading">GALLERY</h1>
+      <div class="login-button" id="login-button">
+         <p>SIGN UP</p>
+         <div class="login"></div>
+      </div>
+   </div>
+   <div class="navbar-button-out">
+      <div class="navbar-button-in" id="nav-button"></div>
+   </div>
+   <div class="navbar" id="navbar">
+      <h1>MENU</h1>
+      <h2 id="nav-close">×</h2>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT TUTORIALS</a>
+      <a href="#">GALLERY</a>
+      <a href="faq.html">FAQS</a>
+      <a href="Blogs.html">BLOGS</a>
+   </div>
+   <div class="login-page" id="login-page">
+      <p id="close">×</p>
+      <input type="email" placeholder="Enter you Email" id="email" required/>
+      <label class="form-label">Enter your Email</label>
+      <input type="password" placeholder="Enter your password" id="password" required>
+      <label class="passo-label">Enter your Password</label>
+      <div id="show-pass"></div>
+      <div id="submit"><p>SIGN UP</p></div>
+   </div>
+<div class="main-section gallery" style="background: none">
+  <div class="container">
+ <center><b><h2 class="heading">RG CLASSES </h2></b></center>
+    <img  src="https://i.ibb.co/pvSFsG2/IMG-20240410-202924.jpg" 
+    alt="Screenshot-20240410-202924" border="0"></a>
+<img src="https://i.ibb.co/19sGX8g/IMG-20240410-202906.jpg" alt="Screenshot-20240410-202906" border="0"></a>
+<img src="https://i.ibb.co/54Fv15y/IMG-20240410-203950.jpg" alt="IMG-20240410-203950" border="0"></a>
+<img src="https://i.ibb.co/zsQ29vz/IMG-20240410-204241.jpg" alt="IMG-20240410-204241" border="0"></a>
+<img src="https://i.ibb.co/p3vz89p/IMG-20240410-204823.jpg" alt="IMG-20240410-204823" border="0"></a>
+<img src="https://i.ibb.co/vjFg8ww/IMG-20240410-205028.jpg" alt="IMG-20240410-205028" border="0"></a>
+<img src="https://i.ibb.co/4tgSMrz/IMG-20240410-205243.jpg" alt="IMG-20240410-205243" border="0"></a>
+<img src="https://i.ibb.co/k5KsWwQ/IMG-20240410-205442.jpg" alt="IMG-20240410-205442" border="0"></a>
+<img src="https://i.ibb.co/WpK90Xf/IMG-20240410-205832.jpg" alt="IMG-20240410-205832" border="0"></a>
+  </div>
+  <script>
+     const show = document.getElementById('show-pass');
+     const password = document.getElementById('password');
+     const email = document.getElementById('email');
+     const page = document.getElementById('login-page');
+     const close = document.getElementById('close');
+     const login = document.getElementById('login-button');
+     const submit = document.getElementById('submit');
+     const navbar = document.getElementById('navbar');
+     const close_nav = document.getElementById('nav-close');
+     const navopen = document.getElementById('nav-button');
+     let pass = false;
+     show.addEventListener('click', () => {
+        if (!pass) {
+           pass = true;
+           password.type = 'text';
+           show.style.filter = 'brightness(1)';
+        }
+        else {
+           pass = false;
+           password.type = 'password';
+           show.style.filter = 'brightness(0)';
+        }
+     });
+     close.addEventListener('click', function() {
+        page.style.display = 'none';
+        email.value = '';
+        password.value = '';
+        pass = false;
+        password.type = 'password';
+        show.style.filter = 'brightness(0)';
+     });
+     login.addEventListener('click', function() {
+        page.style.display = 'block';
+     });
+     submit.addEventListener('click', function() {
+        if (password.value.length >= 8) {
+           localStorage.setItem('email', email.value);
+           localStorage.setItem('password', password.value);
+           alert('Sign Up Successfully!')
+           page.style.display = 'none';
+        }
+        if (email.value === '') {
+           alert('No email provided')
+        }
+        if (password.value.length < 8) {
+           alert('Your password must contain 8 characters')
+        }
+     });
+     close_nav.addEventListener('click', () => {
+        navbar.style.display = 'none';
+     });
+     navopen.addEventListener('click', () => {
+        navbar.style.display = 'block';
+     });
+  </script>
+  </body>
+  </html>

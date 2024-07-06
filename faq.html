@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   .header {
+   height: 120px;
+   width: 100%;
+   background: #9ADC30;
+   top: 0;
+   left: 0;
+   position: absolute;
+}
+.header .heading {
+   color: white;
+   text-align: center;
+}
+html {
+   height: 450%;
+   background: url(bg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.login {
+   height: 30px;
+   width: 30px;
+   background: url(login-icon.png);
+   background-size: cover;
+   position: absolute;
+   right: 0px;
+}
+.login-button {
+   height: 35px;
+   width: 110px;
+   border: 2px solid white;
+   border-radius: 50px;
+   position: absolute;
+   right: 5px;
+   bottom: 5px;
+   color: white;
+   display: flex;
+   align-items: center;
+}
+.login-button p {
+   position: absolute;
+   left: 3px;
+}
+.login-page {
+   height: 200px;
+   width: 300px;
+   background: #FFFFFF;
+   position: absolute;
+   left: 50px;
+   top: 150px;
+   z-index: 59;
+   border-radius: 10px;
+   display: none;
+}
+.login-page #email, #password {
+   position: absolute;
+   height: 20px;
+   width: 240px;
+   left: 10px;
+   top: 25px;
+   border: none;
+   border-bottom: 2px solid #878787;
+}
+.login-page #password {
+   top: 80px;
+}
+.login-page #email:focus, #password:focus {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page input {
+   padding: 8px 10px;
+   font-size: 18px;
+   border: #acacac solid 2px;
+   background-color: transparent;
+   color: #444;
+   transition: 0.15s all ease;
+}
+
+.login-page input:focus {
+   border-color: #eee;
+   outline: none;
+}
+
+.login-page input::placeholder {
+   color: transparent;
+}
+
+.login-page .form-label {
+   position: absolute;
+   top: 35px;
+   left: 0;
+   font-size: 18px;
+   padding: 0 10px;
+   color: #acacac;
+   pointer-events: none;
+   transition: 0.15s all ease;
+}
+.login-page .passo-label {
+   position: absolute;
+   top: 90px;
+   left: 0;
+   font-size: 18px;
+   padding: 0 10px;
+   color: #ACACAC;
+   pointer-events: none;
+   transition: 0.15s all ease;
+}
+.login-page input:focus+.passo-label,
+.login-page input:not(:placeholder-shown)+.passo-label {
+   transform: translate(5px, -22px);
+   background-color: #fff;
+   font-size: 14px;
+   color: #3186FF;
+}
+.login-page #password:not(:placeholder-shown) {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page #email:not(:placeholder-shown) {
+   border-bottom: 2px solid #3186FF;
+}
+.login-page input:focus+.form-label,
+.login-page input:not(:placeholder-shown)+.form-label {
+   transform: translate(5px, -22px);
+   background-color: #fff;
+   font-size: 14px;
+   color: #3186FF;
+}
+.login-page #submit {
+   height: 40px;
+   width: 270px;
+   background: #000;
+   border-radius: 50px;
+   position: absolute;
+   bottom: 10px;
+   left: 13px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   user-select: none;
+}
+.login-page #submit p {
+   position: absolute;
+   left: 100px;
+   color: white;
+   top: -13px;
+   font-size: 20px;
+}
+.login-page #submit:active {
+   background: #454545;
+}
+#show-pass {
+   height: 30px;
+   width: 30px;
+   background: url(eyecon.png);
+   background-size: cover;
+   position: absolute;
+   top: 85px;
+   left: 240px;
+   filter: brightness(0);
+}
+.login-page p {
+   color: #636363;
+   position: absolute;
+   right: 15px;
+   top: -20px;
+   font-size: 30px;
+}
+.navbar-button-in {
+   height: 30px;
+   width: 30px;
+   position: absolute;
+   right: 10px;
+   top: 5px;
+   background: url(menu.png);
+   background-size: cover;
+}
+.navbar-button-out {
+   height: 40px;
+   width: 100%;
+   background: #575757;
+   position: absolute;
+   left: 0;
+   top: 120px;
+   justify-content: center;
+}
+.navbar {
+   height: 100%;
+   width: 100%;
+   background: #353535;
+   position: absolute;
+   left: 0;
+   z-index: 60;
+   display: none;
+   top: 0;
+}
+a {
+   height: 45px;
+   width: 100%;
+   position: absolute;
+   background: #4F4F4F;
+   color: #fff;
+   text-decoration: none;
+   cursor: default;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+a:nth-child(1) {
+   top: 50px;
+}
+a:nth-child(2) {
+   top: 100px;
+}
+a:nth-child(3) {
+   top: 150px;
+}
+a:nth-child(4) {
+   top: 200px;
+}
+a:nth-child(5) {
+   top: 250px;
+}
+a:nth-child(6) {
+   top: 300px;
+}
+a:nth-child(7) {
+   top: 350px;
+}
+a:nth-child(8) {
+   top: 400px;
+}
+a:nth-child(9) {
+   top: 450px;
+}
+.navbar h1 {
+   text-align: center;
+   color: white;
+}
+.navbar h2 {
+   color: white;
+   position: absolute;
+   right: 20px;
+   top: 10px;
+   font-size: 35px;
+}
+.content {
+   position: absolute;
+   top: 200px;
+   color: #fff;
+}
+</style>
+</head>
+<body>
+      <div class="header">
+      <h1 class="heading">FAQS</h1>
+      <div class="login-button" id="login-button">
+         <p>SIGN UP</p>
+         <div class="login"></div>
+      </div>
+   </div>
+   <div class="navbar-button-out">
+      <div class="navbar-button-in" id="nav-button"></div>
+   </div>
+   <div class="navbar" id="navbar">
+      <h1>MENU</h1>
+      <h2 id="nav-close">×</h2>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT TUTORIALS</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="#">FAQS</a>
+      <a href="Blogs.html">BLOGS</a>
+   </div>
+   <div class="login-page" id="login-page">
+      <p id="close">×</p>
+      <input type="email" placeholder="Enter you Email" id="email" required/>
+      <label class="form-label">Enter your Email</label>
+      <input type="password" placeholder="Enter your password" id="password" required>
+      <label class="passo-label">Enter your Password</label>
+      <div id="show-pass"></div>
+      <div id="submit"><p>SIGN UP</p></div>
+   </div>
+<div class="content">
+   <details><summary><B>What subjects do you offer tuition for?</B></summary><br><I> I can cater to various levels and grades of education, including elementary school, middle school, high school, college, and even graduate-level topics. Whether you need help with basic problem , I'm here to assist!</I></details><br>
+<details><summary><B>What teaching methods and approaches do you use?</B></summary><br><B><I>I employ a variety of teaching methods and approaches, including:-<br><br></B></I>
+1)Explanation: Providing clear and concise explanations of concepts, theories, and ideas.<br><br>
+2) Example-based learning: Offering real-life examples to illustrate concepts and enhance understanding.<br><br>
+3) Interactive learning: Engaging in dialogue and responding to questions to facilitate learning through interaction.<br><br>
+4) Problem-solving: Presenting problems or scenarios to encourage critical thinking and application of knowledge.<br><br>
+5) Personalization: Tailoring responses to individual needs and learning styles to maximize comprehension and retention.<br><br>
+<B><I>Adjusting teaching strategies based on the learner's progress, feedback, and areas of difficulty.These methods and approaches aim to create a dynamic and effective learning environment for users seeking information and understanding.</I></B></details><br>
+<details>
+<summary><B>What is the class size for each course?</B></summary><br><I>The class size for each course offered by RG Classes can vary based on several factors, including the specific program or package chosen by the student, the level of education (e.g., kindergarten, primary, secondary, higher education)</I></details><br>
+<details><summary><B>How are students grouped in classes?</B></summary><br><I><B>RG Classes employs various methods to group students in classes based on factors such as:</I></B><br>
+Grade level: Students are often grouped according to their grade or educational level to ensure that the content and pace of instruction align with their academic needs.<br><br>
+Subject or course: Students may be grouped based on the specific subject they are studying or the course they are enrolled in. This allows for targeted instruction.<br><br>
+Overall, Byju's aims to create classes that provide an optimal learning experience for students by considering various factors to ensure that instruction is effective and engaging.</I></details><br>
+<details><summary><B>What is the duration and frequency of classes?</B></summary><br><I>The duration and frequency of classes on RG Classes can vary depending on the specific course or program you are enrolled in. Generally, live classes on RG Classes are scheduled for 1 to 2 hours per session, with the frequency of classes varying from daily sessions to a few times a week. 
+
+Additionally, RG Classes also offers recorded lectures and practice materials that students can access at their convenience, providing flexibility in learning. For more specific information on the duration and frequency of classes for a particular course or program on RG Classes, it is best to visit their official website or contact their customer support team for details.</I></details><br>
+<details><summary><B>How do you assess students' progress and performance?</B></summary><br><I>Assessing students progress and performance can involve a variety of methods, such as quizzes, tests, essays, projects, presentations, and observations. Each method offers unique insights into different aspects of a student's abilities and knowledge. It's also important to provide constructive feedback and communicate with students to understand their strengths and areas for improvement.</I></details><br>
+<details><summary><B>What are your tuition fees and payment options?</B></summary><br><I>According to our class there are many classes or You can pay with cash or online payment is also available.</I></details><br>
+<details><summary><B>For further information or support ?</B></summary><br><I>Contact us:8910489989</I></details><br>
+</div>
+<script>
+   const show = document.getElementById('show-pass');
+   const password = document.getElementById('password');
+   const email = document.getElementById('email');
+   const page = document.getElementById('login-page');
+   const close = document.getElementById('close');
+   const login = document.getElementById('login-button');
+   const submit = document.getElementById('submit');
+   const navbar = document.getElementById('navbar');
+   const close_nav = document.getElementById('nav-close');
+   const navopen = document.getElementById('nav-button');
+   let pass = false;
+   show.addEventListener('click', () => {
+      if (!pass) {
+         pass = true;
+         password.type = 'text';
+         show.style.filter = 'brightness(1)';
+      }
+      else {
+         pass = false;
+         password.type = 'password';
+         show.style.filter = 'brightness(0)';
+      }
+   });
+   close.addEventListener('click', function() {
+      page.style.display = 'none';
+      email.value = '';
+      password.value = '';
+      pass = false;
+      password.type = 'password';
+      show.style.filter = 'brightness(0)';
+   });
+   login.addEventListener('click', function() {
+      page.style.display = 'block';
+   });
+   submit.addEventListener('click', function() {
+      if (password.value.length >= 8) {
+         localStorage.setItem('email', email.value);
+         localStorage.setItem('password', password.value);
+         alert('Sign Up Successfully!')
+         page.style.display = 'none';
+      }
+      if (email.value === '') {
+         alert('No email provided')
+      }
+      if (password.value.length < 8) {
+         alert('Your password must contain 8 characters')
+      }
+   });
+   close_nav.addEventListener('click', () => {
+      navbar.style.display = 'none';
+   });
+   navopen.addEventListener('click', () => {
+      navbar.style.display = 'block';
+   });
+</script>
+</body>
+</html>

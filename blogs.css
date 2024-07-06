@@ -10,11 +10,12 @@
    color: white;
    text-align: center;
 }
-body {
-   font-family: Arial, sans-serif;
-   background: #414141;
-   margin: 0;
-   padding: 0;
+html {
+   height: 200%;
+   background: url(bg.jpg);
+   background-size: cover;
+   color: #FFFFFF;
+   background-repeat: no-repeat;
 }
 .navbar-button-in {
    height: 30px;
@@ -40,7 +41,7 @@ body {
   
   article {
     margin-top: 190px;
-    border: 2px solid #2B2B2B;
+    border: 2px solid #FFFFFF;
   }
   
   footer {
@@ -48,7 +49,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    bottom: 300px;
+    bottom: 30px;
     position: absolute;
   }
   .navbar {

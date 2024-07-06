@@ -1,45 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-   const steps = document.querySelectorAll('.step');
-   let currentStepIndex = 0;
-
-   // Hide all steps except the first one
-   steps.forEach((step, index) => {
-      if (index !== currentStepIndex) {
-         step.style.display = 'none';
-      }
-   });
-
-   // Function to show the current step and hide others
-   function showStep(stepIndex) {
-      steps.forEach((step, index) => {
-         if (index === stepIndex) {
-            step.style.display = 'block';
-         } else {
-            step.style.display = 'none';
-         }
-      });
-   }
-
-   // Function to navigate to the next step
-   function nextStep() {
-      if (currentStepIndex < steps.length - 1) {
-         currentStepIndex++;
-         showStep(currentStepIndex);
-      }
-   }
-
-   // Function to navigate to the previous step
-   function prevStep() {
-      if (currentStepIndex > 0) {
-         currentStepIndex--;
-         showStep(currentStepIndex);
-      }
-   }
-
-   // Event listeners for next and previous buttons
-   document.getElementById('nextBtn').addEventListener('click', nextStep);
-   document.getElementById('prevBtn').addEventListener('click', prevStep);
-});
 const show = document.getElementById('show-pass');
 const password = document.getElementById('password');
 const email = document.getElementById('email');
@@ -79,6 +37,7 @@ submit.addEventListener('click', function() {
       localStorage.setItem('email', email.value);
       localStorage.setItem('password', password.value);
       alert('Sign Up Successfully!')
+      page.style.display = 'none';
    }
    if (email.value === '') {
       alert('No email provided')

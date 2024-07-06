@@ -79,6 +79,7 @@ submit.addEventListener('click', function() {
       localStorage.setItem('email', email.value);
       localStorage.setItem('password', password.value);
       alert('Sign Up Successfully!')
+      page.style.display = 'none';
    }
    if (email.value === '') {
       alert('No email provided')
